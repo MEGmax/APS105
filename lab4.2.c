@@ -1,4 +1,12 @@
 #include <stdio.h>
+/*
+LAB 4.2
+FEB 11 2022
+BY: MATTHEW GRECH
+This program will find the first Erdos number of a user specified range of k's by user another user specified range
+for a's. The program will only accept valid input and will terminate after the first erdos number is found from the
+given range of k's.
+*/
 
 //prototypes
 int gcd (int, int);
