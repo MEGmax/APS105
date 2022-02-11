@@ -1,4 +1,10 @@
 #include <stdio.h>
+/*
+LAB 4.1
+FEB 11 2022
+BY MATTHEW GRECH
+This program outputs pascales triangle with the number of rows specified by the user (up to 13)
+*/
 
 //prototype declorations
 void triangle (int); //prints pascales triangle
@@ -35,20 +41,7 @@ void triangle (int n)
         nCr where r = n-1 and n is constant since it represents the row.*/
         for (int r = currentRow-1; r >= 0; r--)
         {
-           printf("%d", choose(currentRow-1, r));//print current nCr
-
-           if(choose(currentRow-1, r) < 100 && choose(currentRow-1, r) >= 10)//if there is a 2 digit # print 4 spaces
-           {
-               printf("    ");
-           }
-           else if (choose(currentRow-1, r) >= 100)//if there is a 3 digit # print 3 spaces
-           {
-               printf("   ");
-           }
-           else if (choose(currentRow-1, r) < 10)//if there is a 1 digit # print 5 spaces 
-           {
-               printf("     ");
-           }
+           printf("%-6d", choose(currentRow-1, r));//print current nCr with 6 entries before (reserved for spaces and numbers) (keeps everythign alligned) 
         }
 
         printf("\n");
