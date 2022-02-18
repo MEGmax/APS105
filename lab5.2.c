@@ -1,34 +1,49 @@
-//NOT FINISHED
 #include <stdio.h>
 
 void longestSequence(int [], int);
 
 int main ()
 {
-    int array[] = {0, 1, 2, 3, 4, 5};
-    int sizeA = 6;
+    int array[] = {-1, 1, 2, -2, 4, 4, 111};
+    int sizeA = 7;
     longestSequence(array, sizeA);
 }
 
 void longestSequence(int a[], int sizeA)
 {
-    int lengthOfCurrent = 0, currentStartIndex = 0, currentEndIndex = 0, tempLength, j = 0;
-    int *pCurrentStartIndex;
-    for (int i = 0; i < sizeA-1; i++)
+    int lengthOfCurrent = 0, currentStartIndex = 0, longestEndIndex = 0, longestLength = 0, startOfLongestIndex = 0;
+
+    for (int i = 0; i < sizeA; i++) //loop through each index of array
     {
-        if (a[i] < a[i+1]) //if the sequence is increasing
+        if (a[i] >= a[i+1]) //if the sequence is decreasing or the same
         {
-            currentStartIndex = i;
-            pCurrentStartIndex = &currentStartIndex;
+            lengthOfCurrent++;
+            if (lengthOfCurrent > longestLength) //if the current length is the longest
+            {
+                longestLength = lengthOfCurrent;
+                lengthOfCurrent = 0;
+                startOfLongestIndex = currentStartIndex;
+                longestEndIndex = i;
+            }
+            currentStartIndex = i+1;
+            
+        }
+        else //increasing sequence
+        {
             lengthOfCurrent++;
         }
-
-        tempLength = lengthOfCurrent;
-        
         
         
        
     }
-        printf("Longest start: %d Longest End: %d ", *pCurrentStartIndex, a[4]);
+
+    printf("Longest sequence is ");
+
+    for (int i = startOfLongestIndex; i != longestEndIndex; i++)
+    { 
+        printf("%d, ", a[i]);
+    }
+    printf("%d.", a[longestEndIndex]);
+    
     
 }
