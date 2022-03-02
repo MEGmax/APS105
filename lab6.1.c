@@ -19,7 +19,7 @@ void printFoundLocation(int rowDir, int colDir)
     }
     else if(rowDir == 1 && colDir == -1)
     {
-        printf("southwest direction.");
+        printf("south-west direction.");
     }
     else if(rowDir == 0 && colDir == -1)
     {
@@ -27,7 +27,7 @@ void printFoundLocation(int rowDir, int colDir)
     }
     else if(rowDir == -1 && colDir == -1)
     {
-        printf("northwest direction.");
+        printf("north-west direction.");
     }
     else if(rowDir == -1 && colDir == 0)
     {
@@ -35,7 +35,7 @@ void printFoundLocation(int rowDir, int colDir)
     }
     else if(rowDir == -1 && colDir == 1)
     {
-        printf("northeast direction.");
+        printf("north-east direction.");
     }
     else if(rowDir == 0 && colDir == 1)
     {
@@ -43,7 +43,7 @@ void printFoundLocation(int rowDir, int colDir)
     }
     else if(rowDir == 1 && colDir == 1)
     {
-        printf("southeast direction.");
+        printf("south-east direction.");
     }
 }
 
