@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": true,
+      "cwd": "/Users/matthewgrech/APS105/midtermCheck",
+      "environment": [],
+      "program": "/Users/matthewgrech/APS105/midtermCheck/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "lldb",
+      "externalConsole": true
+    }
+  ]
+}

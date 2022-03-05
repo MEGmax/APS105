@@ -1,0 +1,24 @@
+01:30:23 **** Incremental Build of configuration Debug for project firstProject ****
+make all 
+Building file: ../Hello.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Hello.d" -MT"Hello.d" -o "Hello.o" "../Hello.c"
+Finished building: ../Hello.c
+ 
+Building target: firstProject
+Invoking: MacOS X C Linker
+gcc  -o "firstProject"  ./Hello.o   
+Finished building target: firstProject
+ 
+01:30:54 **** Incremental Build of configuration Debug for project firstProject ****
+make all 
+make: Nothing to be done for `all'.
+01:31:11 **** Incremental Build of configuration Debug for project firstProject ****
+make all 
+make: Nothing to be done for `all'.
+01:31:28 **** Incremental Build of configuration Debug for project firstProject ****
+make all 
+make: Nothing to be done for `all'.
+01:32:03 **** Incremental Build of configuration Debug for project firstProject ****
+make all 
+make: Nothing to be done for `all'.
