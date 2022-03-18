@@ -8,6 +8,9 @@
 #include <string.h>
 #include "reversi.h"
 
+//This program will not run in examfiy since the function prototypes are stored in the lab 7 folder in the "reversi.h" file. For it to run in examify
+//copy the function protypes from the reversi.h file and paste them under this comment.
+
 void printTheBoard(char board [][26], int n)
 {
     int count = 0;
