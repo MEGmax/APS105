@@ -9,6 +9,13 @@
     board will be printed with the piece place and the board updated, if the move is illegal then the same configured board will
     be printed and an invalid move message will be displayed to let the user know they made an illegal move. 
 */
+
+/*
+    UPDATED:
+    After all 10 test cases for lab 7 came out, this program scored 7/10, the issues were printing available
+    moves multiple times and terminating if there were no moves for either player. The errors are commented out and added in 
+    the function printAvailableMoves.
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -172,7 +179,7 @@ bool checkLegalInDirection(char board[][26], int n, int row, int col, char colou
 void printAvailableMoves (char board[][26], int n)
 {
                             //SOUTH     SW       WEST      NW      NORTH     NE      EAST     SE
-    int gridDirection[8][2] ={{1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, 1}, {1, 1}}, validMoves = 0;
+    int gridDirection[8][2] ={{1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, 1}, {1, 1}}//, validMoves = 0;
     char colour[2] = {'W', 'B'};
     for(int c = 0; c < 2; c++) //check each colour
     {
@@ -198,7 +205,8 @@ void printAvailableMoves (char board[][26], int n)
                             if(checkLegalInDirection(board, n, i, j, colour[c], gridDirection[d][0], gridDirection[d][1])) //if the move is legal
                             {
                                 printf("%c%c\n", i+97, j+97); //print the coordinates of the legal move using ASCII
-                                validMoves++;
+                                //validMoves++;
+                                break;//needed a break statement in order to not print an avaiable moves multiple times if it is possible in multiple directions
                             }
                         }
                     }
@@ -206,10 +214,11 @@ void printAvailableMoves (char board[][26], int n)
             }   
         }
     }
-    if(validMoves == 0)
+    /*if(validMoves == 0)
     {
         exit(0);
-    }
+    }This is the stupidest thing ever. The program should (imo) terminate if theres no moves for either player 
+    but examify wants the user to ask for input again, so leave this if statement commented out and get rid of validMoves */
 }
 
 void getGamePartThrough (char board [][26], int n)
